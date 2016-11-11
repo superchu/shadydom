@@ -256,8 +256,31 @@ let ShadyMixin = {
 
   getInsertionPointTag() {
     return this._distributor.insertionPointTag;
-  }
+  },
 
+  getSelection() {
+    return document.getSelection();
+  },
+
+  elementFromPoint(x, y) {
+    return document.elementFromPoint(x, y);
+  },
+
+  elementsFromPoint(x, y) {
+    return document.elementsFromPoint(x, y);
+  },
+
+  caretPositionFromPoint(x, y) {
+    return document.caretPositionFromPoint(x, y);
+  },
+
+  get activeElement() {
+    return document.activeElement;
+  },
+
+  get styleSheets() {
+    return document.styleSheets;
+  }
 }
 
 let ShadyFragmentMixin = Object.create(DocumentFragment.prototype);
